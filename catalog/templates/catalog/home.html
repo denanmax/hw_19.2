@@ -40,6 +40,21 @@
                 </div>
             </div>
         </div>
+        <div class="col-3">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">последних 5 товаров</h4>
+            </div>
+            <div class="card-body">
+                <ul>
+                    {% for product in latest_products %}
+                    <li>{{ product.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
 
     <footer class="pt-4 my-md-5 pt-md-5 border-top">

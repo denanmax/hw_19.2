@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 from django.db import models
 
 # Create your models here.
@@ -36,5 +37,13 @@ class Product(models.Model):
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
 
+
+class Contact(models.Model):
+    name = models.CharField(max_length=100, verbose_name='name')
+    phone = models.IntegerField(unique=True, null=False, blank=False)
+    message = models.TextField(verbose_name='message')
+
+    def __str__(self):
+        return self.name
 
 
