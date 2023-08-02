@@ -1,0 +1,54 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 14,
+    "fields": {
+      "name": "Коптер_Фикс",
+      "description": "Квадракоптер для безграничных полётов",
+      "preview_image": "",
+      "category": 1,
+      "price": "60200.00",
+      "creation_date": "2023-08-02T19:07:13.865Z",
+      "last_change_date": "2023-08-02T19:07:13.865Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 15,
+    "fields": {
+      "name": "DELL_Фикс",
+      "description": "Хороший АМЕРИКАНСКИЙ компьюктер",
+      "preview_image": "",
+      "category": 2,
+      "price": "92000.00",
+      "creation_date": "2023-08-02T19:07:13.865Z",
+      "last_change_date": "2023-08-02T19:07:13.865Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 16,
+    "fields": {
+      "name": "Стиральная машина Endesit_Фикс",
+      "description": "Ну а зачем стирать руками? Стирай в машине",
+      "preview_image": "",
+      "category": 1,
+      "price": "60200.00",
+      "creation_date": "2023-08-02T19:07:13.865Z",
+      "last_change_date": "2023-08-02T19:07:13.865Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 17,
+    "fields": {
+      "name": "Кофемашина_Фикс",
+      "description": "На ней никуда не уехать, но кофе выпить можно",
+      "preview_image": "",
+      "category": 1,
+      "price": "43050.00",
+      "creation_date": "2023-08-02T19:07:13.865Z",
+      "last_change_date": "2023-08-02T19:07:13.865Z"
+    }
+  }
+]
