@@ -4,7 +4,7 @@ from catalog.models import Product, Contact
 
 
 def home(request):
-    latest_products = Product.objects.order_by('-id')[:5]
+    latest_products = Product.objects.order_by('id')[:5:-1]
     for product in latest_products:
         print(product.name)  # Пример вывода имени товара в консоль
     return render(request, 'catalog/home.html', {'latest_products': latest_products})
