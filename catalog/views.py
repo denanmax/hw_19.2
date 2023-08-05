@@ -1,13 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from catalog.models import Product, Contact
 
 
 def home(request):
     latest_products = Product.objects.order_by('id')[:5:-1]
-    for product in latest_products:
-        print(product.name)  # Пример вывода имени товара в консоль
-    return render(request, 'catalog/home.html', {'latest_products': latest_products})
+    cat_list = Product.objects.all()
+    context = {
+        'object_list': cat_list,
+        'latest_products': latest_products
+    }
+    return render(request, 'catalog/home.html', context)
 
 
 def contacts(request):
@@ -21,3 +24,7 @@ def contacts(request):
 
     contacts = Contact.objects.all()
     return render(request, 'catalog/contacts.html', {'contacts': contacts})
+
+def product(request, product_id):
+    product = Product.objects.get(pk=product_id)
+    return render(request, 'catalog/product.html', {'product': product})
