@@ -1,17 +1,16 @@
-
-    <div class="row text-center">
-        <div class="col-3">
-            <div class="card mb-4 box-shadow">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">{{ object.name | slice:":15" }}</h3>
-                        <h4 class="card-title pricing-card-title">{{ object.price }} руб.</h4>
-                        <p class="card-text">
-                            {{ object.description | slice:":100" }}
-                        </p>
-                        <a href="{% url 'product' object.id %}" class="btn btn-primary">Купить</a>
-                    </div>
-                </div>
+{% load filters %}
+<div class="col-3">
+    <div class="card mb-4 box-shadow">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">{{ object.name }}</h3>
+                <h4 class="card-title pricing-card-title">{{ object.price }} руб.</h4>
+                <p class="card-text">
+                    {{ object.description | split }}
+                </p>
+                <a href="{% url 'product' object.id %}" class="btn btn-primary">Купить</a>
+                <img src="{{ object.image | mediapath_filtr }}">
             </div>
         </div>
     </div>
+</div>
