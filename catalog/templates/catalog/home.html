@@ -1,4 +1,5 @@
 {% extends 'catalog/base.html' %}
+{% load filters %}
 {% block content%}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">Skystore</h1>
@@ -8,44 +9,8 @@
 
 <div class="container">
     <div class="row text-center">
-        <div class="col-3">
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Удобный сервис рассылок</h4>
-                </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$ 140</h1>
-                        <ul class="list-unstyled mt-3 mb-4 text-start m-3">
-                            <li>- Неограниченная лицензия</li>
-                            <li>- Поддержка</li>
-                            <li>- Установка на сервер</li>
-                            <li>- Получение обновлений</li>
-                        </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
-                    </div>
-                </div>
-            </div>
-        <div class="col-3">
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">последних 5 товаров</h4>
-                </div>
-                    <div class="card-body">
-                        <ul>
-                        {% for product in latest_products %}
-                        <li>{{ product.name }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <div class="col-md-8">
-        <div>
-            {% for object in object_list %}
-            {% include 'catalog/includes/inc-category.html' %}
-            {% endfor %}
+        {% for object in object_list %}
+        {% include 'catalog/includes/inc-category.html' %}
+        {% endfor %}
     </div>
-    </div>
-
 {% endblock %}
