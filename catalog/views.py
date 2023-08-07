@@ -30,5 +30,3 @@ def product(request, product_id):
     return render(request, 'catalog/product.html', {'product': product})
 
 
-def add_product(request):
-    return render(request, template_name='catalog/add_product.html')
