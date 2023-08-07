@@ -1,6 +1,8 @@
+from datetime import datetime
+
 from django.shortcuts import render, get_object_or_404
 
-from catalog.models import Product, Contact
+from catalog.models import Product, Contact, Category
 
 
 def home(request):
@@ -28,7 +30,3 @@ def contacts(request):
 def product(request, product_id):
     product = Product.objects.get(pk=product_id)
     return render(request, 'catalog/product.html', {'product': product})
-
-
-def add_product(request):
-    return render(request, template_name='catalog/add_product.html')
