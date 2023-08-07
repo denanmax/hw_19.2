@@ -8,7 +8,8 @@ def home(request):
     cat_list = Product.objects.all()
     context = {
         'object_list': cat_list,
-        'latest_products': latest_products
+        'latest_products': latest_products,
+        'title': 'TOSYASTORE'
     }
     return render(request, 'catalog/home.html', context)
 
