@@ -1,5 +1,4 @@
 {% extends 'catalog/base.html' %}
-{% load filters %}
 
 {% block content%}
 
@@ -9,9 +8,7 @@
             <div class="card mb-4 box-shadow">
                 </div>
                     <div class="card-body">
-                        <h2>{{ product.name }}</h2>
-                        <p>Описание товара: {{ product.description }}</p>
-                        <p>Цена: {{ product.price }} руб.</p>
+                        <h2>Материал {{ object.title }}</h2>
                     </div>
                 </div>
             </div>

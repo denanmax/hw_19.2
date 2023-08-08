@@ -1,7 +1,16 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic import ListView, DetailView
 
 from catalog.models import Product, Contact, Category
 
+class ProductListView(ListView):
+    model = Product
+    template_name = 'catalog/home.html'
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'catalog/product.html'
+    context_object_name = 'product'  # Optional: specify the name of the context variable
 
 def home(request):
     latest_products = Product.objects.order_by('id')[:5:-1]
