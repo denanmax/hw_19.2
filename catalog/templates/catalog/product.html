@@ -14,8 +14,13 @@
                         <h2>{{ product.name }}</h2>
                         <p>Описание товара: {{ product.description }}</p>
                         <p>Цена: {{ product.price }} руб.</p>
+                            <img class="img"
+                                 src="{% mediapath product.preview_image %}"
+                                 alt="{{ product.name }}"
+                                 width="200"
+                                 height="250"
+                            >
                         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
-                        <img src="{{ object.image | mediapath_filtr }}">
                     </div>
                 </div>
             </div>

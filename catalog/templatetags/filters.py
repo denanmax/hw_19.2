@@ -11,13 +11,7 @@ def split(text):
     return mark_safe(result)
 
 
-@register.filter
-def mediapath_filtr(path):
-    """Фильтр, который преобразует переданный путь в полный путь для доступа к медиафайлу"""
-    return f"/media/{path}"
-
-
 @register.simple_tag
-def mediapath_tag(path):
-    """Шаблонный тег, который преобразует переданный путь в полный путь для доступа к медиафайлу"""
-    return f"/media/{path}"
+def mediapath(val):
+    if val:
+        return f'/media/{val}'
