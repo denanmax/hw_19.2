@@ -15,3 +15,4 @@ def split(text):
 def mediapath(val):
     if val:
         return f'/media/{val}'
+    return '/media/no_photo.jpg'
