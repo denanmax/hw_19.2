@@ -3,7 +3,7 @@
 <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="card mb-4 box-shadow">
                     <div class="card-header">
-                        <form method="POST" action="{% url 'add_product' %}">
+                        <form method="POST" action="{% url 'add_product' %}" enctype="multipart/form-data">
                           {% csrf_token %}
                           <div class="mb-3">
                             <label for="name">Название продукта</label>
@@ -34,7 +34,13 @@
                             <input type="number" name="price" class="form-control" id="price" placeholder="Введите цену">
                           </div>
 
-                          <button type="submit" class="btn btn-primary">Добавить</button>
+                          <button type="submit" class="btn btn-success">
+                            {% if object %}
+                              Сохранить
+                            {% else %}
+                              Добавить
+                            {% endif %}
+                          </button>
                         </form>
                     </div>
                 </div>

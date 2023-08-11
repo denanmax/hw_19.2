@@ -1,17 +1,16 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render
+from django.views.generic import ListView, DetailView
 
 from catalog.models import Product, Contact, Category
 
+class ProductListView(ListView):
+    """Главная старница со списком товаров"""
+    model = Product
+    template_name = 'catalog/home.html'
 
-def home(request):
-    latest_products = Product.objects.order_by('id')[:5:-1]
-    cat_list = Product.objects.all()
-    context = {
-        'object_list': cat_list,
-        'latest_products': latest_products,
-        'title': 'TOSYASTORE'
-    }
-    return render(request, 'catalog/home.html', context)
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'catalog/product.html'
 
 
 def contacts(request):

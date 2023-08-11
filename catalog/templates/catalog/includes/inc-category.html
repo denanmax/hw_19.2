@@ -9,7 +9,6 @@
                     {{ object.description | split }}
                 </p>
                 <a href="{% url 'product' object.id %}" class="btn btn-primary">Купить</a>
-                <img src="{{ object.image | mediapath_filtr }}">
             </div>
         </div>
     </div>
