@@ -1,5 +1,6 @@
 {% extends 'catalog/base.html' %}
 
+{% load my_filters %}
 
 {% block content%}
 
@@ -16,6 +17,12 @@
                         <p>
                             {{ object.context }}
                         </p>
+                        <img class="img"
+                                 src="{{ object.image|blog_mediapath }}"
+                                 alt="{{ blog.name }}"
+                                 width="200"
+                                 height="250"
+                            >
                     </div>
                     <div class="card-footer">
                            Опубликован: {{ object.creation_date }}
