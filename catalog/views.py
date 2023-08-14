@@ -1,16 +1,15 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from catalog.models import Product, Contact, Category
 
 class ProductListView(ListView):
     """Главная старница со списком товаров"""
     model = Product
-    template_name = 'catalog/home.html'
 
 class ProductDetailView(DetailView):
     model = Product
-    template_name = 'catalog/product.html'
 
 
 def contacts(request):
@@ -27,19 +26,18 @@ def contacts(request):
 
 def product(request, product_id):
     product = Product.objects.get(pk=product_id)
-    return render(request, 'catalog/product.html', {'product': product})
+    return render(request, 'catalog/product_detail.html', {'product': product})
 
-def add_product(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        description = request.POST.get('description')
-        preview_image = request.FILES.get('preview_image')
-        category_id = request.POST.get('category')
-        price = request.POST.get('price')
+class ProductCreateView(CreateView):
+    model = Product
+    fields = ('name', 'description', 'preview_image', 'category', 'price')
+    success_url = reverse_lazy('home')
 
-        category = Category.objects.get(id=category_id)
-        product = Product(name=name, description=description, preview_image=preview_image, category=category, price=price)
-        product.save()
+class ProductUpdateView(UpdateView):
+    model = Product
+    fields = ('name', 'description', 'preview_image', 'category', 'price')
+    success_url = reverse_lazy('home')
 
-    categories = Category.objects.all()
-    return render(request, 'catalog/add_product.html', {'categories': categories})
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('home')

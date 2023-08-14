@@ -8,8 +8,16 @@
                 <p class="card-text">
                     {{ object.description | split }}
                 </p>
-                <a href="{% url 'product' object.id %}" class="btn btn-primary">Купить</a>
+                <a href="{% url 'edit_product' object.pk %}" type="button"
+                   class="btn btn-primary">Просмотр</a>
+                <a href="{% url 'delete_product' object.pk %}" type="button"
+                   class="btn btn-primary">Удалить</a>
             </div>
+            {% if object.is_active %}
+            <a class="btn btn-warning" href=" {% url 'toggle_activity' object.pk %}">Снять продукт с продажи?</a>
+            {% else %}
+            <a class="btn btn-success" href=" {% url 'toggle_activity' object.pk %}">Вернуть на продажу?</a>
+            {% endif %}
         </div>
     </div>
 </div>

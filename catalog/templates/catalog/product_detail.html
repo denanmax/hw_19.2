@@ -11,7 +11,7 @@
                     <h4 class="my-0 font-weight-normal">Удобный сервис рассылок</h4>
                 </div>
                     <div class="card-body">
-                        <h2>{{ product.name }}</h2>
+                        <h2>{{ object.name }}</h2>
                         <p>Описание товара: {{ product.description }}</p>
                         <p>Цена: {{ product.price }} руб.</p>
                             <img class="img"
@@ -20,7 +20,13 @@
                                  width="200"
                                  height="250"
                             >
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
+                        <button type="submit" class="btn btn-success">
+                            {% if object %}
+                                Сохранить
+                            {% else %}
+                                Создать
+                            {% endif %}
+                        </button>
                     </div>
                 </div>
             </div>
