@@ -8,7 +8,7 @@
                 <p class="card-text">
                     {{ object.description | split }}
                 </p>
-                <a href="{% url 'edit_product' object.pk %}" type="button"
+                <a href="{% url 'product' object.pk %}" type="button"
                    class="btn btn-primary">Просмотр</a>
                 <a href="{% url 'delete_product' object.pk %}" type="button"
                    class="btn btn-primary">Удалить</a>
