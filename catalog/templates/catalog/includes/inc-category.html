@@ -8,6 +8,11 @@
                 <p class="card-text">
                     {{ object.description | split }}
                 </p>
+                {% for version in object.version_set.all %}
+                    {% if version.is_current %}
+                        <p class="text-info">Версия: {{ version.version_number }}({{ version.version_name }})</p>
+                    {% endif %}
+                  {% endfor %}
                 <a href="{% url 'product' object.pk %}" type="button"
                    class="btn btn-primary">Просмотр</a>
                 <a href="{% url 'delete_product' object.pk %}" type="button"
