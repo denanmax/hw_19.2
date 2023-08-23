@@ -2,26 +2,48 @@
 
 {% block content %}
 
-    <div class="col-12">
-        <div class="row">
-            <div class="col-6">
-                <div class="card">
-                    <div class="card-body">
-                        <form method="post" enctype="multipart/form-data">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit" class="btn btn-primary">
-                            {% if object %}
-                                Сохранить
-                            {% else %}
-                                Добавить
-                            {% endif %}
-                        </button>
-                        </form>
-                    </div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="title">
+                Добавление продукта
+            </h2>
+
+            <div class="card-header">
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">
+                        {% if object %}
+                            Сохранить
+                        {% else %}
+                            Добавить
+                        {% endif %}
+                    </button>
+                    </form>
                 </div>
             </div>
         </div>
+        {% if object %}
+        <div class="col-6">
+            <div class="card-header">
+              <div class="card-body text-start">
+                <h1 class="card-title text-center">
+                    Версии продукта
+                </h1>
+                {{ formset.management_form }}
+                {% for form in formset.forms %}
+                    {{ form.as_p }}
+                    {% if not forloop.last %}
+                        <hr>
+                    {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+        </div>
+        {% endif %}
     </div>
+</div>
 
 {% endblock %}

@@ -8,11 +8,17 @@
         <div class="col-3">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Удобный сервис рассылок</h4>
+                    <h4 class="my-0 font-weight-normal">Продукт</h4>
                 </div>
                     <div class="card-body">
                         <h2>{{ object.name }}</h2>
                         <p>Описание товара: {{ product.description }}</p>
+                        {% for version in object.version_set.all %}
+                          {% if version.is_current %}
+                              <p class="text-info">Версия: {{ version.version_number }}({{ version.version_name }})</p>
+                          {% endif %}
+                        {% endfor %}
+                        <p>Категория: {{ product.category }}</p>
                         <p>Цена: {{ product.price }} руб.</p>
                             <img class="img"
                                  src="{{ product.preview_image|mediapath }}"
@@ -20,16 +26,15 @@
                                  width="200"
                                  height="250"
                             >
-                        <button type="submit" class="btn btn-primary">
-                            {% if object %}
-                                Сохранить
-                            {% else %}
-                                Создать
-                            {% endif %}
-                        </button>
+                        <a href="{% url 'edit_product' object.pk %}" type="button"
+                           class="btn btn-primary">Изменить</a>
+                        <a href="{% url 'delete_product' object.pk %}" type="button"
+                           class="btn btn-primary">Удалить</a>
+
                     </div>
-                </div>
             </div>
         </div>
+    </div>
+</div>
 
 {% endblock %}
