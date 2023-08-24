@@ -1,54 +1,1606 @@
 [
   {
-    "model": "catalog.product",
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-08-02T11:29:17.288Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Портативный ПК,Компьютеры, Компьютерная техника,120000, 2023-08-02 11:29:17.286337+00:00/2023-08-02 11:29:17.286362+00:00",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-08-02T11:30:08.567Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Айфон,Электроника, Электронные товары общго пользования,89000, 2023-08-02 11:30:08.565833+00:00/2023-08-02 11:30:08.565856+00:00",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-08-02T11:31:12.993Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Посудомойка,Электроника, Электронные товары общго пользования,50000, 2023-08-02 11:31:12.992381+00:00/2023-08-02 11:31:12.992405+00:00",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-08-02T19:17:32.464Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-02 19:07:13.865770+00:00/2023-08-02 19:07:13.865780+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-08-02T19:17:32.466Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Коптер,Электроника, Электронные товары общго пользования,60200.00, 2023-08-02 19:07:13.865709+00:00/2023-08-02 19:07:13.865728+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-08-02T19:17:32.468Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "Кофемашина,Электроника, Электронные товары общго пользования,43050.00, 2023-08-02 19:07:13.865844+00:00/2023-08-02 19:07:13.865852+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-08-02T19:17:32.470Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "Стиральная машина Endesit,Электроника, Электронные товары общго пользования,60200.00, 2023-08-02 19:07:13.865810+00:00/2023-08-02 19:07:13.865818+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-08-08T18:18:22.228Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "DELL_Фикс,Компьютеры, Компьютерная техника,92000.00, 2023-08-02 19:07:13.865000+00:00/2023-08-08 18:18:22.225991+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-08-08T18:23:42.467Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "DELL_Фикс,Компьютеры, Компьютерная техника,92000.00, 2023-08-02 19:07:13.865000+00:00/2023-08-08 18:23:42.463981+00:00",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-08-08T18:37:21.588Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "DELL_Фикс,Компьютеры, Компьютерная техника,92000.00, 2023-08-02 19:07:13.865000+00:00/2023-08-08 18:37:21.586268+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-08-08T18:37:33.324Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "22",
+      "object_repr": "Айпад_Фикс,Компьютеры, Компьютерная техника,43050.00, 2023-08-02 19:07:13.865000+00:00/2023-08-08 18:37:33.322219+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-08-09T05:30:29.529Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 05:30:29.527850+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-08-09T06:21:40.230Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 06:21:40.228877+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
     "pk": 14,
     "fields": {
-      "name": "Коптер_Фикс",
-      "description": "Квадракоптер для безграничных полётов",
-      "preview_image": "",
-      "category": 1,
-      "price": "60200.00",
-      "creation_date": "2023-08-02T19:07:13.865Z",
-      "last_change_date": "2023-08-02T19:07:13.865Z"
+      "action_time": "2023-08-09T06:21:47.532Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 06:21:47.530898+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
     }
   },
   {
-    "model": "catalog.product",
+    "model": "admin.logentry",
     "pk": 15,
     "fields": {
-      "name": "DELL_Фикс",
-      "description": "Хороший АМЕРИКАНСКИЙ компьюктер",
-      "preview_image": "",
-      "category": 2,
-      "price": "92000.00",
-      "creation_date": "2023-08-02T19:07:13.865Z",
-      "last_change_date": "2023-08-02T19:07:13.865Z"
+      "action_time": "2023-08-09T06:40:54.704Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "41",
+      "object_repr": "Кофемашина,Электроника, Электронные товары общго пользования,43050.00, 2023-08-09 05:29:50.134581+00:00/2023-08-09 06:40:54.703027+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
     }
   },
   {
-    "model": "catalog.product",
+    "model": "admin.logentry",
     "pk": 16,
     "fields": {
-      "name": "Стиральная машина Endesit_Фикс",
-      "description": "Ну а зачем стирать руками? Стирай в машине",
-      "preview_image": "",
-      "category": 1,
-      "price": "60200.00",
-      "creation_date": "2023-08-02T19:07:13.865Z",
-      "last_change_date": "2023-08-02T19:07:13.865Z"
+      "action_time": "2023-08-09T06:47:45.099Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "41",
+      "object_repr": "Кофемашина,Электроника, Электронные товары общго пользования,43050.00, 2023-08-09 05:29:50.134581+00:00/2023-08-09 06:47:45.097806+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-08-09T06:47:54.396Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "41",
+      "object_repr": "Кофемашина,Электроника, Электронные товары общго пользования,43050.00, 2023-08-09 05:29:50.134581+00:00/2023-08-09 06:47:54.393834+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-08-09T06:48:04.495Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 06:48:04.493653+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-08-09T06:48:13.596Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 06:48:13.594187+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-08-09T06:48:24.455Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 06:48:24.454138+00:00",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-08-09T07:07:06.815Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 07:07:06.813672+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-08-09T07:07:13.526Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "41",
+      "object_repr": "Кофемашина,Электроника, Электронные товары общго пользования,43050.00, 2023-08-09 05:29:50.134581+00:00/2023-08-09 07:07:13.524820+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-08-09T07:15:52.474Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 07:15:52.472935+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-08-09T07:24:08.718Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 07:24:08.716403+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-08-09T07:24:16.110Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 07:24:16.108183+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-08-09T07:59:08.283Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "DELL,Компьютеры, Компьютерная техника,92000.00, 2023-08-09 05:29:50.134422+00:00/2023-08-09 07:24:16.108183+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-08-09T07:59:41.167Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "42",
+      "object_repr": "Новый,Компьютеры, Компьютерная техника,145516.00, 2023-08-09 07:12:56.749291+00:00/2023-08-09 07:59:41.165928+00:00",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435 \\u043f\\u0440\\u043e\\u0434\\u0443\\u043a\\u0442\\u0430\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-08-11T11:14:35.987Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "43",
+      "object_repr": "еще один для проверки,Компьютеры, Компьютерная техника,25000.00, 2023-08-09 07:57:21.691979+00:00/2023-08-09 07:57:21.692001+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-08-11T11:14:35.992Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "44",
+      "object_repr": "еще раз проверяю фото,Компьютеры, Компьютерная техника,414114.00, 2023-08-09 08:02:46.481781+00:00/2023-08-09 08:02:46.481803+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-08-11T11:14:35.994Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "45",
+      "object_repr": "продлёнка,Компьютеры, Компьютерная техника,227000.00, 2023-08-11 10:54:40.680312+00:00/2023-08-11 10:54:40.680350+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-08-12T14:43:47.509Z",
+      "user": 2,
+      "content_type": 13,
+      "object_id": "18",
+      "object_repr": "Проверяю слаг изменен",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0435\\u0432\\u044c\\u044e\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-08-13T10:33:08.393Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "47",
+      "object_repr": "new prod ,Компьютеры, Компьютерная техника,2500.00, 2023-08-13 07:39:51.866429+00:00/2023-08-13 07:39:51.866458+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-08-13T10:33:08.397Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "46",
+      "object_repr": "впрчсьир,Компьютеры, Компьютерная техника,53564.00, 2023-08-11 11:14:54.871433+00:00/2023-08-11 11:14:54.871455+00:00",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-08-13T12:46:53.949Z",
+      "user": 2,
+      "content_type": 13,
+      "object_id": "16",
+      "object_repr": "dnhncghn",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2023-08-23T08:41:35.882Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "Version object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2023-08-23T08:54:29.398Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "Version object (1)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2023-08-23T09:14:07.955Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "Version object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2023-08-23T10:02:57.527Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "Version object (1)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2023-08-23T10:06:23.042Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "Version object (2)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u0442\\u0435\\u043a\\u0443\\u0449\\u0435\\u0439 \\u0432\\u0435\\u0440\\u0441\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2023-08-23T10:26:11.533Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "3",
+      "object_repr": "Version object (3)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2023-08-23T21:42:22.946Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "Кошка Б.П",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2023-08-23T21:42:53.236Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "2",
+      "object_repr": "Бесоёб",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2023-08-23T21:43:13.669Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "3",
+      "object_repr": "Ангорка",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2023-08-23T21:43:51.269Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "1",
+      "object_repr": "Тося",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2023-08-23T21:44:11.333Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "2",
+      "object_repr": "Тосьманский дьявол",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2023-08-23T21:44:38.145Z",
+      "user": 1,
+      "content_type": 15,
+      "object_id": "3",
+      "object_repr": "Тосенька",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+      "action_time": "2023-08-24T09:48:46.911Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "3",
+      "object_repr": "Version object (3)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2023-08-24T09:55:19.456Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "2",
+      "object_repr": "Version object (2)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2023-08-24T09:55:19.459Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "1",
+      "object_repr": "Version object (1)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2023-08-24T09:56:43.426Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "4",
+      "object_repr": "Version object (4)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2023-08-24T10:09:39.907Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "5",
+      "object_repr": "Version object (5)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u0442\\u0435\\u043a\\u0443\\u0449\\u0430\\u0435\\u0439 \\u0432\\u0435\\u0440\\u0441\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2023-08-24T11:50:22.460Z",
+      "user": 1,
+      "content_type": 14,
+      "object_id": "7",
+      "object_repr": "Version object (7)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0440\\u0438\\u0437\\u043d\\u0430\\u043a \\u0442\\u0435\\u043a\\u0443\\u0449\\u0430\\u0435\\u0439 \\u0432\\u0435\\u0440\\u0441\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add category",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change category",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete category",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view category",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add product",
+      "content_type": 8,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change product",
+      "content_type": 8,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete product",
+      "content_type": 8,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view product",
+      "content_type": 8,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add contact",
+      "content_type": 9,
+      "codename": "add_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change contact",
+      "content_type": 9,
+      "codename": "change_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete contact",
+      "content_type": 9,
+      "codename": "delete_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view contact",
+      "content_type": 9,
+      "codename": "view_contact"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add material",
+      "content_type": 10,
+      "codename": "add_material"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change material",
+      "content_type": 10,
+      "codename": "change_material"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete material",
+      "content_type": 10,
+      "codename": "delete_material"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view material",
+      "content_type": 10,
+      "codename": "view_material"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add контакт",
+      "content_type": 11,
+      "codename": "add_contacts"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change контакт",
+      "content_type": 11,
+      "codename": "change_contacts"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete контакт",
+      "content_type": 11,
+      "codename": "delete_contacts"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view контакт",
+      "content_type": 11,
+      "codename": "view_contacts"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add Сообщение",
+      "content_type": 12,
+      "codename": "add_userdata"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change Сообщение",
+      "content_type": 12,
+      "codename": "change_userdata"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete Сообщение",
+      "content_type": 12,
+      "codename": "delete_userdata"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view Сообщение",
+      "content_type": 12,
+      "codename": "view_userdata"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add Блог",
+      "content_type": 13,
+      "codename": "add_blog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change Блог",
+      "content_type": 13,
+      "codename": "change_blog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete Блог",
+      "content_type": 13,
+      "codename": "delete_blog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view Блог",
+      "content_type": 13,
+      "codename": "view_blog"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add Версия",
+      "content_type": 14,
+      "codename": "add_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change Версия",
+      "content_type": 14,
+      "codename": "change_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete Версия",
+      "content_type": 14,
+      "codename": "delete_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view Версия",
+      "content_type": 14,
+      "codename": "view_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add Кошка",
+      "content_type": 15,
+      "codename": "add_cat"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change Кошка",
+      "content_type": 15,
+      "codename": "change_cat"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete Кошка",
+      "content_type": 15,
+      "codename": "delete_cat"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view Кошка",
+      "content_type": 15,
+      "codename": "view_cat"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add categories",
+      "content_type": 16,
+      "codename": "add_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change categories",
+      "content_type": 16,
+      "codename": "change_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete categories",
+      "content_type": 16,
+      "codename": "delete_categories"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view categories",
+      "content_type": 16,
+      "codename": "view_categories"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$aG0wjyxAkIHKq4zPNVkM4p$abkNXqC3NGnp3SamWhqLllCR0VLYcivBw5ch3hhL5yE=",
+      "last_login": "2023-08-24T09:48:36.074Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-08-02T09:58:04.059Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$BZCOInGULxTrQxMVYBzqYr$U7PUuH7RlzCEHg9kffVCg7ljI/vYEI/0ErasrE/XxtQ=",
+      "last_login": "2023-08-12T08:10:48.017Z",
+      "is_superuser": true,
+      "username": "blog",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-08-12T08:10:32.462Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "catalog",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "catalog",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "catalog",
+      "model": "contact"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "materials",
+      "model": "material"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "catalog",
+      "model": "contacts"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "catalog",
+      "model": "userdata"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "blog",
+      "model": "blog"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "catalog",
+      "model": "version"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "cats",
+      "model": "cat"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "cats",
+      "model": "categories"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "48x9klex6fp1y3oxybj2j4oyvxfwbg3h",
+    "fields": {
+      "session_data": ".eJxVjMsOwiAQRf-FtSHTBzC4dO83kGGGStVAUtqV8d-1SRe6veec-1KBtjWHraUlzKLOqlen3y0SP1LZgdyp3KrmWtZljnpX9EGbvlZJz8vh_h1kavlbe2DkOAlaw8ZYwK73nbPGkYsDIAvEcbDESJ4QTO_9CM6Dwym5UUjU-wPH-Dcq:1qUjhw:CGOa5DNhDX9w-AEXiCqbvn8uC4NbbwAMao99eW1hF9w",
+      "expire_date": "2023-08-26T08:10:48.021Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "8elgh8y6argq48tfpk70svos5fxo9y9b",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlleeyNvKOk5g7X-LA4gR4qTCnF3iJQC2jcz76UCb2sNWy9LmLI6K1Cn3y1yepS2g3zndpt1mtu6TFHvij5o19c5l-flcP8OKvf6rcsA4AFGYz3T4NDhSEgG0URxwCSeCDILkgBEkwxZJxaSF5BknFfvD5xjNnY:1qR8i9:yQSqZx7o6KvniwAsFcd9xTAQnrPrEo5W0jxigkKSR50",
+      "expire_date": "2023-08-16T10:04:09.343Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "cwiw1f6b4uitw5zpqx62jcp2cbkh1d4h",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlleeyNvKOk5g7X-LA4gR4qTCnF3iJQC2jcz76UCb2sNWy9LmLI6K1Cn3y1yepS2g3zndpt1mtu6TFHvij5o19c5l-flcP8OKvf6rcsA4AFGYz3T4NDhSEgG0URxwCSeCDILkgBEkwxZJxaSF5BknFfvD5xjNnY:1qZ6xA:qHxF_Y7xuoIUZUnOAPLxIDmGS7SN_3eb_D2whCi4RPc",
+      "expire_date": "2023-09-07T09:48:36.078Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ebe2q7zcmw3pucjk6n9xann8la057hfx",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlleeyNvKOk5g7X-LA4gR4qTCnF3iJQC2jcz76UCb2sNWy9LmLI6K1Cn3y1yepS2g3zndpt1mtu6TFHvij5o19c5l-flcP8OKvf6rcsA4AFGYz3T4NDhSEgG0URxwCSeCDILkgBEkwxZJxaSF5BknFfvD5xjNnY:1qS3E6:QNGiDAgq2M5GW7Wr3FfoW15aOPHVFNe1ucSbpT1r4Oo",
+      "expire_date": "2023-08-18T22:24:54.345Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "gky1n1b8wiwx6o5sfmqz60i5zmqutoua",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlleeyNvKOk5g7X-LA4gR4qTCnF3iJQC2jcz76UCb2sNWy9LmLI6K1Cn3y1yepS2g3zndpt1mtu6TFHvij5o19c5l-flcP8OKvf6rcsA4AFGYz3T4NDhSEgG0URxwCSeCDILkgBEkwxZJxaSF5BknFfvD5xjNnY:1qYtRy:yVW6CaVjVDyHjcuZlgmTPI4uYAGtNztEDMLNep3_aUQ",
+      "expire_date": "2023-09-06T19:23:30.305Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "obp6alc2z6ik5yzr4wyhj3k8zajf5sgk",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlleeyNvKOk5g7X-LA4gR4qTCnF3iJQC2jcz76UCb2sNWy9LmLI6K1Cn3y1yepS2g3zndpt1mtu6TFHvij5o19c5l-flcP8OKvf6rcsA4AFGYz3T4NDhSEgG0URxwCSeCDILkgBEkwxZJxaSF5BknFfvD5xjNnY:1qT4cs:VwvwAi1NNuCFJIjjGvAq8V2P2slR736NT5A-BtUdfeE",
+      "expire_date": "2023-08-21T18:06:42.758Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "xq47ttmnpnkd6aa63q2lqgbh1biowrg5",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlleeyNvKOk5g7X-LA4gR4qTCnF3iJQC2jcz76UCb2sNWy9LmLI6K1Cn3y1yepS2g3zndpt1mtu6TFHvij5o19c5l-flcP8OKvf6rcsA4AFGYz3T4NDhSEgG0URxwCSeCDILkgBEkwxZJxaSF5BknFfvD5xjNnY:1qYRZl:blQ6zI5fb36kIyGrXUIK7SofIxyAA_qYurDp1lmlrAk",
+      "expire_date": "2023-09-05T13:37:41.082Z"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "name": "Электроника",
+      "description": "Электронные товары общго пользования"
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 12,
+    "fields": {
+      "name": "новая111",
+      "description": "новая111"
     }
   },
   {
     "model": "catalog.product",
-    "pk": 17,
+    "pk": 38,
     "fields": {
-      "name": "Кофемашина_Фикс",
+      "name": "новая",
+      "description": "норм",
+      "preview_image": "",
+      "category": 1,
+      "price": "2500.00",
+      "creation_date": "2023-08-09T05:29:50.134Z",
+      "last_change_date": "2023-08-24T09:55:56.671Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 40,
+    "fields": {
+      "name": "Стиральная машина Endesit",
+      "description": "Ну а зачем стирать руками? Стирай в машине",
+      "preview_image": "product_image/62da53f179ce8_Kynh2El.jpg",
+      "category": 1,
+      "price": "60200.00",
+      "creation_date": "2023-08-09T05:29:50.134Z",
+      "last_change_date": "2023-08-24T09:47:23.788Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 41,
+    "fields": {
+      "name": "Кофемашина",
       "description": "На ней никуда не уехать, но кофе выпить можно",
       "preview_image": "",
       "category": 1,
       "price": "43050.00",
-      "creation_date": "2023-08-02T19:07:13.865Z",
-      "last_change_date": "2023-08-02T19:07:13.865Z"
+      "creation_date": "2023-08-09T05:29:50.134Z",
+      "last_change_date": "2023-08-24T12:00:10.985Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 62,
+    "fields": {
+      "name": "плохоysq",
+      "description": "вм",
+      "preview_image": "",
+      "category": 1,
+      "price": "22222.00",
+      "creation_date": "2023-08-22T14:51:16.257Z",
+      "last_change_date": "2023-08-22T14:51:16.257Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 63,
+    "fields": {
+      "name": "новый",
+      "description": "новый описание",
+      "preview_image": "",
+      "category": 1,
+      "price": "25000.00",
+      "creation_date": "2023-08-23T08:43:26.449Z",
+      "last_change_date": "2023-08-23T08:43:40.870Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 64,
+    "fields": {
+      "name": "товар111",
+      "description": "товар111",
+      "preview_image": "product_image/Снимок_экрана_от_2023-08-02_13-34-48_BkCIIOG.png",
+      "category": 12,
+      "price": "0.02",
+      "creation_date": "2023-08-23T10:21:55.440Z",
+      "last_change_date": "2023-08-24T09:59:24.157Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 7,
+    "fields": {
+      "product": 41,
+      "version_number": 1,
+      "version_name": "1",
+      "is_current": true
+    }
+  },
+  {
+    "model": "catalog.contact",
+    "pk": 7,
+    "fields": {
+      "name": "denis",
+      "phone": "26516516",
+      "message": "dfbxfgngfn"
+    }
+  },
+  {
+    "model": "blog.blog",
+    "pk": 32,
+    "fields": {
+      "title": "нывй Блог",
+      "slug": "nyivj-blog",
+      "context": "111",
+      "image": "",
+      "creation_date": "2023-08-13T12:50:53.141Z",
+      "publication_sign": true,
+      "views": 9
     }
   }
 ]
