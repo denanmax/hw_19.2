@@ -44,7 +44,7 @@ class Version(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Продукт')
     version_number = models.IntegerField(verbose_name='номер версии')
     version_name = models.CharField(max_length=50, verbose_name='название версии')
-    is_current = models.BooleanField(default=True, verbose_name='признак текущей версии', unique=True)
+    is_current = models.BooleanField(default=False, verbose_name='признак текущаей версии')
 
     class Meta:
         verbose_name = 'Версия'

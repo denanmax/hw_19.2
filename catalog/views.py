@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.forms import inlineformset_factory
 
-from catalog.froms import ProductForm, Category_form, VersionForm
+from catalog.froms import ProductForm, CategoryForm, VersionForm
 from catalog.models import Product, Contact, Category, Version
 
 
@@ -46,7 +46,7 @@ class ProductUpdateView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        VersionFormset = inlineformset_factory(Product, Version, form=Category_form, extra=1)
+        VersionFormset = inlineformset_factory(Product, Version, form=VersionForm, extra=1)
         if self.request.method == 'POST':
             context_data['formset'] = VersionFormset(self.request.POST, instance=self.object)
         else:
@@ -73,17 +73,17 @@ class CategoryListView(ListView):
 
 class CategoryCreateView(CreateView):
     model = Category
-    form_class = Category_form
+    form_class = CategoryForm
     success_url = reverse_lazy('category_list')
 
 class CategoryUpdateView(UpdateView):
     model = Category
-    form_class = Category_form
+    form_class = CategoryForm
     success_url = reverse_lazy('category_list')
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
-        CategoryFormset = inlineformset_factory(Category, Product, form=Category_form, extra=1)
+        CategoryFormset = inlineformset_factory(Category, Product, form=CategoryForm, extra=1)
         if self.request.method == 'POST':
             context_data['formset'] = CategoryFormset(self.request.POST, instance=self.object)
         else:

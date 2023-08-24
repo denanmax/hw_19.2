@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import CheckboxInput
 
 from catalog.models import Product, Category, Version
 
@@ -26,7 +27,7 @@ class ProhibitedWordsMixin:
         return cleaned_data
 
 
-class ProductForm(StyleFormMixin, ProhibitedWordsMixin, forms.ModelForm):
+class ProductForm(ProhibitedWordsMixin, forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
@@ -44,12 +45,13 @@ class ProductForm(StyleFormMixin, ProhibitedWordsMixin, forms.ModelForm):
 
 
 
-class Category_form(StyleFormMixin, ProhibitedWordsMixin, forms.ModelForm):
+class CategoryForm(StyleFormMixin, ProhibitedWordsMixin, forms.ModelForm):
     class Meta:
         model = Category
         fields = '__all__'
 
-class VersionForm(StyleFormMixin, forms.ModelForm):
+class VersionForm(forms.ModelForm):
     class Meta:
         model = Version
         fields = '__all__'
+
