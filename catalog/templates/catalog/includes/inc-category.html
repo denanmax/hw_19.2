@@ -20,8 +20,10 @@
                   {% endfor %}
                 <a href="{% url 'product' object.pk %}" type="button"
                    class="btn btn-primary">Просмотр</a>
+
                 <a href="{% url 'delete_product' object.pk %}" type="button"
                    class="btn btn-primary">Удалить</a>
+
 
             </div>
             {% if object.is_active %}

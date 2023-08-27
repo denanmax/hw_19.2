@@ -1,6 +1,7 @@
 {% extends 'catalog/base.html' %}
 {% load filters %}
 {% block content%}
+
 <div class="col-12">
     <form class="row" method="post" enctype="multipart/form-data">
         <div class="col-6">
@@ -52,7 +53,9 @@
 
             </div>
         </div>
-        {% endif %}
+
     </form>
 </div>
+
+{% endif %}
 {% endblock %}

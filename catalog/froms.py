@@ -57,3 +57,8 @@ class VersionForm(StyleFormMixin, forms.ModelForm):
         model = Version
         fields = '__all__'
 
+    def save(self, commit=True):
+        if commit:
+            Version.objects.exclude(pk=self.instance.pk).update(is_current=False)
+        return super().save(commit=commit)
+
