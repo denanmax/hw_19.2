@@ -1,6 +1,6 @@
 from datetime import datetime
 
-
+from django.conf import settings
 from django.db import models
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
@@ -31,6 +31,7 @@ class Product(models.Model):
     creation_date = models.DateTimeField(auto_now_add=True)
     last_change_date = models.DateTimeField(auto_now=True, **NULLABLE)
     is_active = models.BooleanField(default=True)
+    lashed = models.ForeignKey(settings.AUTH_USER_MODEL, **NULLABLE, on_delete=models.SET_NULL, verbose_name='привязка')
 
     def __str__(self):
         return f'{self.name},{self.category},{self.price}, {self.creation_date}/{self.last_change_date}'
