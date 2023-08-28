@@ -38,6 +38,18 @@ class ProductCreateView(CreateView):
     form_class = ProductForm
     success_url = reverse_lazy('home')
 
+    def get_initial(self):
+        initial = super().get_initial()
+        initial['lashed'] = self.request.user
+        return initial
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.lashed = self.request.user
+        self.object.save()
+        return super().form_valid(form)
+
+
 
 class ProductUpdateView(UpdateView):
     model = Product
@@ -70,6 +82,15 @@ class ProductDeleteView(DeleteView):
 class CategoryListView(ListView):
     """Главная старница со списком товаров"""
     model = Category
+
+class CategoryView(ListView):
+    model = Product
+    template_name = 'category_products.html'
+    context_object_name = 'products'
+
+    def get_queryset(self):
+        category = Category.objects.get(pk=self.kwargs['pk'])
+        return Product.objects.filter(category=category)
 
 class CategoryCreateView(CreateView):
     model = Category

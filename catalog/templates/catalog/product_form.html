@@ -1,8 +1,9 @@
 {% extends 'catalog/base.html' %}
 {% load filters %}
 {% block content%}
+
 <div class="col-12">
-    <form class="row" method="post">
+    <form class="row" method="post" enctype="multipart/form-data">
         <div class="col-6">
             <div class='card'>
                <div class="card-header">
@@ -12,7 +13,7 @@
                </div>
                    <div class='col-8 mb-4'>
                        <div class="card">
-                           <div class="card-body">
+                           <div class="card-body" >
                                    {%csrf_token%}
                                    {{ form.as_p }}
                                    <button type="submit" class="btn btn-success">
@@ -52,7 +53,9 @@
 
             </div>
         </div>
-        {% endif %}
+
     </form>
 </div>
+
+{% endif %}
 {% endblock %}

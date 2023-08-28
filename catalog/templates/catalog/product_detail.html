@@ -20,16 +20,19 @@
                         {% endfor %}
                         <p>Категория: {{ product.category }}</p>
                         <p>Цена: {{ product.price }} руб.</p>
-                            <img class="img"
-                                 src="{{ product.preview_image|mediapath }}"
-                                 alt="{{ product.name }}"
-                                 width="200"
-                                 height="250"
-                            >
+                        <img class="img"
+                                 src="{% mediapath object.preview_image %}"
+                             alt="{{ product.name }}"
+                             width="200"
+                             height="250"
+                        >
+                        {% if user.is_authenticated %}
                         <a href="{% url 'edit_product' object.pk %}" type="button"
                            class="btn btn-primary">Изменить</a>
                         <a href="{% url 'delete_product' object.pk %}" type="button"
                            class="btn btn-primary">Удалить</a>
+                        {% endif %}
+
 
                     </div>
             </div>

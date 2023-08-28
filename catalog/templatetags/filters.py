@@ -11,7 +11,7 @@ def split(text):
     return mark_safe(result)
 
 
-@register.filter
+@register.simple_tag
 def mediapath(val):
     if val:
         return f'/media/{val}'
