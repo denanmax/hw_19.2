@@ -1,5 +1,8 @@
 from gettext import Catalog
 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
+from django.http import Http404
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
@@ -9,11 +12,12 @@ from catalog.froms import ProductForm, CategoryForm, VersionForm
 from catalog.models import Product, Contact, Category, Version
 
 
-class ProductListView(ListView):
+# @login_required(login_url='users/')
+class ProductListView(LoginRequiredMixin, ListView):
     model = Product
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Product
 
 
@@ -29,13 +33,15 @@ def contacts(request):
     contacts = Contact.objects.all()
     return render(request, 'catalog/contacts.html', {'contacts': contacts})
 
-def product(request, product_id):
-    product = Product.objects.get(pk=product_id)
-    return render(request, 'catalog/product_detail.html', {'product': product})
 
-class ProductCreateView(CreateView):
+# def product(request, product_id):
+#     product = Product.objects.get(pk=product_id)
+#     return render(request, 'catalog/product_detail.html', {'product': product})
+
+class ProductCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
+    permission_required = 'catalog.add_product'
     success_url = reverse_lazy('home')
 
     def get_initial(self):
@@ -50,11 +56,17 @@ class ProductCreateView(CreateView):
         return super().form_valid(form)
 
 
-
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
+    permission_required = 'catalog.change_product'
     success_url = reverse_lazy('home')
+
+    def get_object(self, queryset=None):
+        self.object = super().get_object(queryset)
+        if self.object.lashed != self.request.user:
+            raise Http404
+        return self.object
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data(**kwargs)
@@ -75,15 +87,20 @@ class ProductUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Product
     success_url = reverse_lazy('home')
 
-class CategoryListView(ListView):
+    def test_func(self):
+        return self.request.user.is_superuser
+
+
+class CategoryListView(LoginRequiredMixin, ListView):
     """Главная старница со списком товаров"""
     model = Category
 
-class CategoryView(ListView):
+
+class CategoryView(LoginRequiredMixin, ListView):
     model = Product
     template_name = 'category_products.html'
     context_object_name = 'products'
@@ -92,12 +109,14 @@ class CategoryView(ListView):
         category = Category.objects.get(pk=self.kwargs['pk'])
         return Product.objects.filter(category=category)
 
-class CategoryCreateView(CreateView):
+
+class CategoryCreateView(LoginRequiredMixin, CreateView):
     model = Category
     form_class = CategoryForm
     success_url = reverse_lazy('category_list')
 
-class CategoryUpdateView(UpdateView):
+
+class CategoryUpdateView(LoginRequiredMixin, UpdateView):
     model = Category
     form_class = CategoryForm
     success_url = reverse_lazy('category_list')
@@ -120,6 +139,7 @@ class CategoryUpdateView(UpdateView):
             formset.save()
         return super().form_valid(form)
 
-class CategoryDeleteView(DeleteView):
+
+class CategoryDeleteView(LoginRequiredMixin, DeleteView):
     model = Category
     success_url = reverse_lazy('category_list')

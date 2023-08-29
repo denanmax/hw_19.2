@@ -9,11 +9,13 @@
               </p>
               <div class="card-body">
                   <p class="card-text">email: {{ object.email }}
+                      {% if not user.is_superuser %}
                       {% if object.email_is_confirmed %}
                         <span class="badge text-success">Подтверждён</span><br>
                       {% else %}
                         <a href="{% url 'users:confirm' %}" class="btn btn-sm btn-danger">Подтвердить</a>
                       {% endif %}<br>
+                      {% endif %}
                   {% if object %}
                   <h5 class="card-title">{{ object.first_name }} {{ object.last_name }}</h5>
                   Телефон: {{ object.phone }}<br>

@@ -43,7 +43,7 @@ def generate_password(request):
     request.user.set_password(new_password)
     request.user.save()
     send_mail(
-        subject='Вы сменили пароль',
+        subject='Вы сменили пароль из профиля',
         message=f'Новый пароль {new_password}',
         from_email=settings.EMAIL_HOST_USER,
         recipient_list=[request.user.email]
