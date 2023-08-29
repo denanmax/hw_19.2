@@ -27,10 +27,11 @@
                              width="200"
                              height="250"
                         >
+
                         {% if user.is_authenticated and object.lashed == user %}
-                        {% if perms.catalog.change_product %}
                             <a href="{% url 'edit_product' object.pk %}" type="button" class="btn btn-primary">Изменить</a>
-                        {% endif %}
+                        {% elif perms.catalog.change_product %}
+                            <a href="{% url 'moderate_product' object.pk %}" type="button" class="btn btn-primary">Модерировать</a>
                         {% endif %}
 
 
