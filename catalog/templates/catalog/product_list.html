@@ -8,13 +8,11 @@
 </div>
 <div class="container">
     <div class="col-12">
-      {% if user.is_authenticated %}
+      {% if perms.catalog.add_product %}
         <a href="{% url 'create_product' %}" type="button" class="btn btn-primary mb-3">Добавить продукт </a>
       {% endif %}
             <div class="row text-center">
-                {% for object in object_list %}
                 {% include 'catalog/includes/inc-category.html' %}
-                {% endfor %}
             </div>
     </div>
 </div>

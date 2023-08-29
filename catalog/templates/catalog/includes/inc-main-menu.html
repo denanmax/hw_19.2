@@ -9,8 +9,10 @@
             <li class="list-inline-item"><a href="{% url 'category_list' %}">Категории</a></li>
             {% if user.is_authenticated  %}
             <li class="list-inline-item"><a href="{% url 'users:profile_view' %}">Профиль</a></li>
+            {% if not user.is_superuser %}
             {% if not user.email_is_confirmed %}
             <li class="list-inline-item text-danger">не подтвержден</li>
+            {% endif %}
             {% endif %}
             <li class="list-inline-item"><a href="{% url 'users:logout' %}">Выйти</a></li>
             {% else %}

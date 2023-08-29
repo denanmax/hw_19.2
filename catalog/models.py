@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from django.conf import settings
+from django.contrib.auth.models import Group, Permission
 from django.db import models
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
@@ -26,11 +27,11 @@ class Product(models.Model):
     name = models.CharField(max_length=50, blank=False, verbose_name='наименование')
     description = models.TextField(verbose_name='описание')
     preview_image = models.ImageField(upload_to='product_image/', **NULLABLE, verbose_name='изображение продукта')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1,verbose_name='категория')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1, verbose_name='категория')
     price = models.DecimalField(max_digits=10, decimal_places=2)
     creation_date = models.DateTimeField(auto_now_add=True)
     last_change_date = models.DateTimeField(auto_now=True, **NULLABLE)
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True, verbose_name='опубликован')
     lashed = models.ForeignKey(settings.AUTH_USER_MODEL, **NULLABLE, on_delete=models.SET_NULL, verbose_name='привязка')
 
     def __str__(self):
@@ -40,6 +41,14 @@ class Product(models.Model):
         ordering = ('name',)
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
+        permissions = [
+            (
+                "set_published_status",
+                "Can publish post",
+
+            )
+        ]
+
 
 class Version(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, verbose_name='Продукт')

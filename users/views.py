@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib.auth import login
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
@@ -18,7 +19,7 @@ class RegisterView(CreateView):
     success_url = reverse_lazy('users:login')
 
 
-class ProfileView(UpdateView):
+class ProfileView(LoginRequiredMixin, UpdateView):
     model = User
     form_class = UserProfileForm
     success_url = reverse_lazy('users:profile_view')
@@ -27,7 +28,7 @@ class ProfileView(UpdateView):
         return self.request.user
 
 
-class UserDetailView(DetailView):
+class UserDetailView(LoginRequiredMixin, DetailView):
     model = User
 
     def get_object(self, queryset=None):
@@ -76,3 +77,5 @@ def password_reset(request):
             return render(request, 'users/password_reset_form.html',
                           {'error_message': 'Такого пользователя не существует'})
     return render(request, 'users/password_reset_form.html')
+
+
