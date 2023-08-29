@@ -2,7 +2,6 @@ from django import forms
 
 from catalog.models import Product, Category, Version
 
-
 class StyleFormMixin:
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
