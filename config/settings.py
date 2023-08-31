@@ -16,7 +16,8 @@ from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv(BASE_DIR / '.env ')
+dot_env = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path=dot_env)
 
 
 # Quick-start development settings - unsuitable for production
@@ -84,10 +85,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'catalog',
-        'USER': 'postgres',
-        'PASSWORD': 'qwerty',
-        'HOST': '127.0.0.1',  # Адрес, на котором развернут сервер БД
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USERNAME'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': '127.0.0.1',
         'PORT': 5432,
     }
 }
@@ -145,7 +146,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/users'
 
-#
+
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -156,8 +157,8 @@ EMAIL_PORT = 465
 
 EMAIL_USE_SSL = True
 
-EMAIL_HOST_USER = 'd3nizmaximov@yandex.ru'
-EMAIL_HOST_PASSWORD = 'ombtpfdounqwvzcm'
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
