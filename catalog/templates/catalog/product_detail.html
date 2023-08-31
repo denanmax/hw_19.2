@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <h2>{{ object.name }}</h2>
                         <p>Описание товара: {{ product.description }}</p>
-                        {% for version in object.version_set.all %}
+                        {% for version in versions %}
                           {% if version.is_current %}
                               <p class="text-info">Версия: {{ version.version_number }}({{ version.version_name }})</p>
                           {% endif %}

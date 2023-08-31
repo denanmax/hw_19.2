@@ -1,15 +1,19 @@
 from gettext import Catalog
 
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
+from django.core.cache import cache
+from django.core.mail import send_mail
 from django.http import Http404
-from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.forms import inlineformset_factory
 
 from catalog.froms import ProductForm, CategoryForm, VersionForm
 from catalog.models import Product, Contact, Category, Version
+from catalog.services import get_cached_subjects_from_product, get_cached_categories
 
 
 # @login_required(login_url='users/')
@@ -19,6 +23,12 @@ class ProductListView(LoginRequiredMixin, ListView):
 
 class ProductDetailView(LoginRequiredMixin, DetailView):
     model = Product
+    permission_required = 'catalog.view_product'
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['product'] = get_cached_subjects_from_product(self.object.pk)
+        return context_data
 
 
 def contacts(request):
@@ -55,6 +65,7 @@ class ProductCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView)
         self.object.save()
         return super().form_valid(form)
 
+
 class ProductModeratorUpdateView(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
@@ -78,6 +89,7 @@ class ProductModeratorUpdateView(LoginRequiredMixin, PermissionRequiredMixin, Up
             formset.instance = self.object
             formset.save()
         return super().form_valid(form)
+
 
 class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
@@ -122,6 +134,11 @@ class CategoryListView(LoginRequiredMixin, ListView):
     """Главная старница со списком товаров"""
     model = Category
 
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['categories'] = get_cached_categories()
+        return context_data
+
 
 class CategoryView(LoginRequiredMixin, ListView):
     model = Product
@@ -131,6 +148,11 @@ class CategoryView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         category = Category.objects.get(pk=self.kwargs['pk'])
         return Product.objects.filter(category=category)
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        context_data['categories'] = get_cached_categories()
+        return context_data
 
 
 class CategoryCreateView(LoginRequiredMixin, CreateView):
@@ -166,3 +188,6 @@ class CategoryUpdateView(LoginRequiredMixin, UpdateView):
 class CategoryDeleteView(LoginRequiredMixin, DeleteView):
     model = Category
     success_url = reverse_lazy('category_list')
+
+    def test_func(self):
+        return self.request.user.is_superuser

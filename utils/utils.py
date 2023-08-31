@@ -49,6 +49,3 @@ def generate_password(request):
         recipient_list=[request.user.email]
     )
     return redirect(reverse_lazy('users:login'))
-
-
-

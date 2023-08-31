@@ -11,9 +11,13 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+dot_env = os.path.join(BASE_DIR, '.env')
+load_dotenv(dotenv_path=dot_env)
 
 
 # Quick-start development settings - unsuitable for production
@@ -81,10 +85,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'catalog',
-        'USER': 'postgres',
-        'PASSWORD': 'qwerty',
-        'HOST': '127.0.0.1',  # Адрес, на котором развернут сервер БД
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USERNAME'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': '127.0.0.1',
         'PORT': 5432,
     }
 }
@@ -142,7 +146,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/users'
 
-#
+
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -162,3 +166,12 @@ SERVER_EMAIL = EMAIL_HOST_USER
 
 EMAIL_ADMIN = EMAIL_HOST_USER
 
+CACHE_ENABLED = os.getenv('CACHE_ENABLED') == 'True'
+
+if CACHE_ENABLED:
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.redis.RedisCache",
+            "LOCATION": os.getenv('CACHE_LOCATION'),
+        }
+    }

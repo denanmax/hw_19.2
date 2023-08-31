@@ -31,7 +31,7 @@ class ProhibitedWordsMixin:
 class ProductForm(StyleFormMixin, ProhibitedWordsMixin, forms.ModelForm):
     class Meta:
         model = Product
-        fields = ('name', 'description', 'category', 'price',)
+        fields = ('name', 'description', 'category', 'price', 'is_active')
 
     # def clean_name(self):
     #     cleaned_data = self.cleaned_data['name'].lower()
@@ -56,8 +56,8 @@ class VersionForm(StyleFormMixin, forms.ModelForm):
         model = Version
         fields = '__all__'
 
-    def save(self, commit=True):
-        if commit:
-            Version.objects.exclude(pk=self.instance.pk).update(is_current=False)
-        return super().save(commit=commit)
+    # def save(self, commit=True):
+    #     if commit:
+    #         Version.objects.exclude(pk=self.instance.pk).update(is_current=False)
+    #     return super().save(commit=commit)
 
